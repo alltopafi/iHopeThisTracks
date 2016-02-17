@@ -24,7 +24,7 @@ We are proud to partner with
 Advace Auto Parts
 How would you like to use the App?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="43" y="63" width="315" height="134"/>
@@ -80,9 +80,38 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="top" id="pK6-GI-r1Y"/>
                         <viewControllerLayoutGuide type="bottom" id="IxA-jp-925"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DriverController" id="XSI-8S-eZc">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="managerController" id="XSI-8S-eZc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" backIndicatorImage="Bak" translatesAutoresizingMaskIntoConstraints="NO" id="qdO-sf-OE5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Manager" id="Y4e-sn-EDo">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="5bZ-rZ-jBt"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Pbx-Wb-VK0">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="KrR-gl-iD5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="13" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qdO-sf-OE5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qdO-sf-OE5"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-zt-Y4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,6 +127,7 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="69c-j6-gEa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="driverController" id="2nM-Wj-Ou5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKf-G4-gRA">
@@ -134,4 +164,10 @@ How would you like to use the App?</string>
             <point key="canvasLocation" x="1026" y="845"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bak" width="16" height="16"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KrR-gl-iD5"/>
+    </inferredMetricsTieBreakers>
 </document>
