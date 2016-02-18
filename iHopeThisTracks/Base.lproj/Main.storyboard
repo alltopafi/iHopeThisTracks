@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -73,10 +73,10 @@ How would you like to use the App?</string>
             </objects>
             <point key="canvasLocation" x="222" y="339"/>
         </scene>
-        <!--View Controller-->
+        <!--Manager View Controller-->
         <scene sceneID="KbN-ke-NHF">
             <objects>
-                <viewController id="xzb-j7-A9Y" customClass="ViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xzb-j7-A9Y" customClass="managerViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pK6-GI-r1Y"/>
                         <viewControllerLayoutGuide type="bottom" id="IxA-jp-925"/>
@@ -98,58 +98,49 @@ How would you like to use the App?</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pAi-db-Agc">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-ol-yMx">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="91" width="400" height="509"/>
+                                </variation>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IxA-jp-925" firstAttribute="top" secondItem="pAi-db-Agc" secondAttribute="bottom" constant="8" symbolic="YES" id="QRf-3C-0Zg"/>
-                            <constraint firstItem="qdO-sf-OE5" firstAttribute="centerX" secondItem="pAi-db-Agc" secondAttribute="centerX" id="R1Y-F0-Xcr"/>
                             <constraint firstItem="qdO-sf-OE5" firstAttribute="top" secondItem="XSI-8S-eZc" secondAttribute="topMargin" constant="13" id="UGT-pr-fw6"/>
-                            <constraint firstItem="pAi-db-Agc" firstAttribute="leading" secondItem="XSI-8S-eZc" secondAttribute="leadingMargin" constant="-8" id="XIE-a8-3dZ"/>
-                            <constraint firstItem="pAi-db-Agc" firstAttribute="top" secondItem="qdO-sf-OE5" secondAttribute="bottom" constant="19" id="bus-1P-pMl"/>
                             <constraint firstAttribute="trailing" secondItem="qdO-sf-OE5" secondAttribute="trailing" id="ccP-dv-aEW"/>
                             <constraint firstItem="qdO-sf-OE5" firstAttribute="leading" secondItem="XSI-8S-eZc" secondAttribute="leading" id="iaw-Io-RsT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qdO-sf-OE5"/>
-                                <exclude reference="pAi-db-Agc"/>
+                                <exclude reference="tNU-ol-yMx"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="R1Y-F0-Xcr"/>
                                 <exclude reference="UGT-pr-fw6"/>
                                 <exclude reference="ccP-dv-aEW"/>
                                 <exclude reference="iaw-Io-RsT"/>
-                                <exclude reference="XIE-a8-3dZ"/>
-                                <exclude reference="bus-1P-pMl"/>
-                                <exclude reference="QRf-3C-0Zg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qdO-sf-OE5"/>
-                                <include reference="pAi-db-Agc"/>
+                                <include reference="tNU-ol-yMx"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="R1Y-F0-Xcr"/>
                                 <include reference="UGT-pr-fw6"/>
                                 <include reference="ccP-dv-aEW"/>
                                 <include reference="iaw-Io-RsT"/>
-                                <include reference="XIE-a8-3dZ"/>
-                                <include reference="bus-1P-pMl"/>
-                                <include reference="QRf-3C-0Zg"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="pAi-db-Agc" id="vJx-HV-O5y"/>
+                        <outlet property="mapView" destination="tNU-ol-yMx" id="6aG-he-xyP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-zt-Y4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138.5" y="186"/>
+            <point key="canvasLocation" x="1126.5" y="151"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6XL-f4-s6g">
