@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,6 +20,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjA-cs-IWG">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <string key="text">Thank you fo choosing iHopeThisTracks
 We are proud to partner with 
 Advace Auto Parts
@@ -33,6 +34,7 @@ How would you like to use the App?</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waN-Gz-Rlf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Manager"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="90" y="247" width="66" height="30"/>
@@ -43,6 +45,7 @@ How would you like to use the App?</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB9-ba-XdI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Driver"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="233" y="247" width="46" height="30"/>
@@ -52,6 +55,7 @@ How would you like to use the App?</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -87,12 +91,14 @@ How would you like to use the App?</string>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-ol-yMx">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="91" width="400" height="509"/>
                                 </variation>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="Bak" translatesAutoresizingMaskIntoConstraints="NO" id="qdO-sf-OE5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
                                 <items>
                                     <navigationItem title="Manager" id="Y4e-sn-EDo">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="5bZ-rZ-jBt"/>
@@ -105,6 +111,7 @@ How would you like to use the App?</string>
                                 </items>
                             </navigationBar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qdO-sf-OE5" firstAttribute="top" secondItem="XSI-8S-eZc" secondAttribute="topMargin" constant="13" id="UGT-pr-fw6"/>
@@ -151,14 +158,209 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="g9B-2y-J1t"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dUG-ic-0TO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-4e-dlW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Add Invoices" id="UzG-uM-LvL"/>
+                                </items>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-A7-Prl">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="41" y="69" width="56" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smf-BP-2g8">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="51" y="149" width="49" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invoice #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSm-ae-fZr">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="107" width="77" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE0-YI-AnI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="53" y="187" width="44" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-jq-FQa">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="29" y="225" width="68" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWj-KZ-AvP">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="66" width="203" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6C-03-w1n">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="104" width="203" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-iO-THr">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="146" width="203" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-nH-xF1">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="184" width="203" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIf-za-aqw">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="116" y="222" width="203" height="30"/>
+                                </variation>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxi-Oz-T4n">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="402" width="375" height="216"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-yk-3qz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add to My Route"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="241" y="350" width="114" height="44"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNa-jq-FQa" firstAttribute="top" secondItem="XE0-YI-AnI" secondAttribute="bottom" constant="20" id="EhT-wn-VmW"/>
+                            <constraint firstItem="g9B-2y-J1t" firstAttribute="top" secondItem="hNa-jq-FQa" secondAttribute="bottom" constant="393" id="HkU-Ph-TZS"/>
+                            <constraint firstItem="Nih-A7-Prl" firstAttribute="top" secondItem="qb1-4e-dlW" secondAttribute="bottom" constant="25" id="J5q-0L-4I1"/>
+                            <constraint firstItem="DSm-ae-fZr" firstAttribute="height" secondItem="Nih-A7-Prl" secondAttribute="height" id="MN8-uk-1wz"/>
+                            <constraint firstItem="smf-BP-2g8" firstAttribute="height" secondItem="Nih-A7-Prl" secondAttribute="height" id="Mjq-xH-nE6"/>
+                            <constraint firstItem="hNa-jq-FQa" firstAttribute="height" secondItem="Nih-A7-Prl" secondAttribute="height" id="OvJ-e2-ugB"/>
+                            <constraint firstItem="DSm-ae-fZr" firstAttribute="top" secondItem="Nih-A7-Prl" secondAttribute="bottom" constant="8" id="X7U-M7-rZN"/>
+                            <constraint firstItem="XE0-YI-AnI" firstAttribute="top" secondItem="smf-BP-2g8" secondAttribute="bottom" constant="15" id="X9A-ME-ajd"/>
+                            <constraint firstItem="XE0-YI-AnI" firstAttribute="height" secondItem="Nih-A7-Prl" secondAttribute="height" id="fsW-kP-Xgz"/>
+                            <constraint firstItem="smf-BP-2g8" firstAttribute="top" secondItem="DSm-ae-fZr" secondAttribute="bottom" constant="8" id="x3d-04-M1P"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qb1-4e-dlW"/>
+                                <exclude reference="Nih-A7-Prl"/>
+                                <exclude reference="smf-BP-2g8"/>
+                                <exclude reference="DSm-ae-fZr"/>
+                                <exclude reference="XE0-YI-AnI"/>
+                                <exclude reference="hNa-jq-FQa"/>
+                                <exclude reference="gWj-KZ-AvP"/>
+                                <exclude reference="j6C-03-w1n"/>
+                                <exclude reference="b8M-iO-THr"/>
+                                <exclude reference="i5p-nH-xF1"/>
+                                <exclude reference="kIf-za-aqw"/>
+                                <exclude reference="Rxi-Oz-T4n"/>
+                                <exclude reference="OEV-yk-3qz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="J5q-0L-4I1"/>
+                                <exclude reference="MN8-uk-1wz"/>
+                                <exclude reference="X7U-M7-rZN"/>
+                                <exclude reference="Mjq-xH-nE6"/>
+                                <exclude reference="x3d-04-M1P"/>
+                                <exclude reference="X9A-ME-ajd"/>
+                                <exclude reference="fsW-kP-Xgz"/>
+                                <exclude reference="EhT-wn-VmW"/>
+                                <exclude reference="OvJ-e2-ugB"/>
+                                <exclude reference="HkU-Ph-TZS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qb1-4e-dlW"/>
+                                <include reference="Nih-A7-Prl"/>
+                                <include reference="smf-BP-2g8"/>
+                                <include reference="DSm-ae-fZr"/>
+                                <include reference="XE0-YI-AnI"/>
+                                <include reference="hNa-jq-FQa"/>
+                                <include reference="gWj-KZ-AvP"/>
+                                <include reference="j6C-03-w1n"/>
+                                <include reference="b8M-iO-THr"/>
+                                <include reference="i5p-nH-xF1"/>
+                                <include reference="kIf-za-aqw"/>
+                                <include reference="Rxi-Oz-T4n"/>
+                                <include reference="OEV-yk-3qz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="J5q-0L-4I1"/>
+                                <include reference="MN8-uk-1wz"/>
+                                <include reference="X7U-M7-rZN"/>
+                                <include reference="Mjq-xH-nE6"/>
+                                <include reference="x3d-04-M1P"/>
+                                <include reference="X9A-ME-ajd"/>
+                                <include reference="fsW-kP-Xgz"/>
+                                <include reference="EhT-wn-VmW"/>
+                                <include reference="OvJ-e2-ugB"/>
+                                <include reference="HkU-Ph-TZS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Jvi-i6-mlc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMa-Nd-M6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="1588"/>
+            <point key="canvasLocation" x="1844.25" y="1587.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="DWl-xm-zcj">
@@ -169,7 +371,9 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="PWS-qM-OTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zeH-nU-pCe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="pwx-Qb-dCS"/>
@@ -187,7 +391,9 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="3Dw-w6-P4g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Xy-cY-1OT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="3P3-ID-kJ8"/>
@@ -203,6 +409,7 @@ How would you like to use the App?</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="t0e-ua-5Rn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -224,7 +431,9 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="uPL-ha-Bfu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RUc-qi-ouv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="brR-d8-0zn"/>
@@ -242,7 +451,9 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="60y-Nq-qXK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mx4-28-VCU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dUF-Cl-ha8"/>
