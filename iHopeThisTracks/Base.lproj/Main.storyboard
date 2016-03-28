@@ -313,16 +313,16 @@ How would you like to use the App?</string>
                                 <exclude reference="OEV-yk-3qz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="J5q-0L-4I1"/>
+                                <exclude reference="HkU-Ph-TZS"/>
                                 <exclude reference="MN8-uk-1wz"/>
                                 <exclude reference="X7U-M7-rZN"/>
-                                <exclude reference="Mjq-xH-nE6"/>
-                                <exclude reference="x3d-04-M1P"/>
+                                <exclude reference="J5q-0L-4I1"/>
                                 <exclude reference="X9A-ME-ajd"/>
                                 <exclude reference="fsW-kP-Xgz"/>
                                 <exclude reference="EhT-wn-VmW"/>
                                 <exclude reference="OvJ-e2-ugB"/>
-                                <exclude reference="HkU-Ph-TZS"/>
+                                <exclude reference="Mjq-xH-nE6"/>
+                                <exclude reference="x3d-04-M1P"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -342,25 +342,24 @@ How would you like to use the App?</string>
                                 <include reference="OEV-yk-3qz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="J5q-0L-4I1"/>
+                                <include reference="HkU-Ph-TZS"/>
                                 <include reference="MN8-uk-1wz"/>
                                 <include reference="X7U-M7-rZN"/>
-                                <include reference="Mjq-xH-nE6"/>
-                                <include reference="x3d-04-M1P"/>
+                                <include reference="J5q-0L-4I1"/>
                                 <include reference="X9A-ME-ajd"/>
                                 <include reference="fsW-kP-Xgz"/>
                                 <include reference="EhT-wn-VmW"/>
                                 <include reference="OvJ-e2-ugB"/>
-                                <include reference="HkU-Ph-TZS"/>
+                                <include reference="Mjq-xH-nE6"/>
+                                <include reference="x3d-04-M1P"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Jvi-i6-mlc"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBarItem key="tabBarItem" title="Invoice" id="Jvi-i6-mlc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMa-Nd-M6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.25" y="1587.5"/>
+            <point key="canvasLocation" x="1843.5" y="1638"/>
         </scene>
         <!--Update Invoice-->
         <scene sceneID="DWl-xm-zcj">
@@ -391,8 +390,37 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="3Dw-w6-P4g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Xy-cY-1OT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IO-3A-A3h">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="476"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oay-dZ-aAO">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="580" width="324" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-zg-zKe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Send"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="580" width="36" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
