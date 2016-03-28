@@ -266,13 +266,6 @@ How would you like to use the App?</string>
                                     <rect key="frame" x="116" y="222" width="203" height="30"/>
                                 </variation>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxi-Oz-T4n">
-                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
-                                <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="402" width="375" height="216"/>
-                                </variation>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-yk-3qz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -309,7 +302,6 @@ How would you like to use the App?</string>
                                 <exclude reference="b8M-iO-THr"/>
                                 <exclude reference="i5p-nH-xF1"/>
                                 <exclude reference="kIf-za-aqw"/>
-                                <exclude reference="Rxi-Oz-T4n"/>
                                 <exclude reference="OEV-yk-3qz"/>
                             </mask>
                             <mask key="constraints">
@@ -338,7 +330,6 @@ How would you like to use the App?</string>
                                 <include reference="b8M-iO-THr"/>
                                 <include reference="i5p-nH-xF1"/>
                                 <include reference="kIf-za-aqw"/>
-                                <include reference="Rxi-Oz-T4n"/>
                                 <include reference="OEV-yk-3qz"/>
                             </mask>
                             <mask key="constraints">
@@ -372,8 +363,40 @@ How would you like to use the App?</string>
                     <view key="view" contentMode="scaleToFill" id="zeH-nU-pCe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-nK-uDS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="My Route" id="FB9-eh-gGZ"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-1N-nLa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="106" width="367" height="248"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="X9i-nK-uDS"/>
+                                <exclude reference="7ed-1N-nLa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="X9i-nK-uDS"/>
+                                <include reference="7ed-1N-nLa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Update Invoice" id="pwx-Qb-dCS"/>
                 </viewController>
