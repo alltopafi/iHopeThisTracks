@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main View" id="BYZ-38-t0r" customClass="ViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,10 +73,10 @@ How would you like to use the App?</string>
             </objects>
             <point key="canvasLocation" x="222" y="339"/>
         </scene>
-        <!--Manager View Controller-->
+        <!--Manager-->
         <scene sceneID="KbN-ke-NHF">
             <objects>
-                <viewController id="xzb-j7-A9Y" customClass="managerViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Manager" id="xzb-j7-A9Y" customClass="managerViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pK6-GI-r1Y"/>
                         <viewControllerLayoutGuide type="bottom" id="IxA-jp-925"/>
@@ -142,10 +142,10 @@ How would you like to use the App?</string>
             </objects>
             <point key="canvasLocation" x="1126.5" y="151"/>
         </scene>
-        <!--Item 2-->
+        <!--Add Invoice-->
         <scene sceneID="ok6-OB-qBs">
             <objects>
-                <viewController id="lGk-AF-m81" sceneMemberID="viewController">
+                <viewController title="Add Invoice" id="lGk-AF-m81" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="okZ-x3-W8G"/>
                         <viewControllerLayoutGuide type="bottom" id="g9B-2y-J1t"/>
@@ -154,16 +154,16 @@ How would you like to use the App?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Jvi-i6-mlc"/>
+                    <tabBarItem key="tabBarItem" title="Invoice" id="Jvi-i6-mlc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMa-Nd-M6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="1588"/>
+            <point key="canvasLocation" x="1843.5" y="1638"/>
         </scene>
-        <!--Item-->
+        <!--Update Invoice-->
         <scene sceneID="DWl-xm-zcj">
             <objects>
-                <viewController id="Won-9c-QX7" sceneMemberID="viewController">
+                <viewController title="Update Invoice" id="Won-9c-QX7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fb0-KC-LGi"/>
                         <viewControllerLayoutGuide type="bottom" id="PWS-qM-OTl"/>
@@ -172,34 +172,75 @@ How would you like to use the App?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pwx-Qb-dCS"/>
+                    <tabBarItem key="tabBarItem" title="Update Invoice" id="pwx-Qb-dCS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRU-oe-BUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843.5" y="2378"/>
+            <point key="canvasLocation" x="961.5" y="2170"/>
         </scene>
-        <!--Item 1-->
+        <!--Messages-->
         <scene sceneID="gTl-XD-fOA">
             <objects>
-                <viewController id="2BB-7P-jpJ" sceneMemberID="viewController">
+                <viewController title="Messages" id="2BB-7P-jpJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1U-e0-QHU"/>
                         <viewControllerLayoutGuide type="bottom" id="3Dw-w6-P4g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Xy-cY-1OT">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IO-3A-A3h">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="476"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oay-dZ-aAO">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="580" width="324" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-zg-zKe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="580" width="36" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6IO-3A-A3h"/>
+                                <exclude reference="oay-dZ-aAO"/>
+                                <exclude reference="G7D-zg-zKe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6IO-3A-A3h"/>
+                                <include reference="oay-dZ-aAO"/>
+                                <include reference="G7D-zg-zKe"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3P3-ID-kJ8"/>
+                    <tabBarItem key="tabBarItem" title="Messages" id="3P3-ID-kJ8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onJ-H8-YZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="927"/>
+            <point key="canvasLocation" x="1844.25" y="926.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Driver Tab Bar-->
         <scene sceneID="kdx-GV-QH2">
             <objects>
-                <tabBarController id="znR-I3-2PT" sceneMemberID="viewController">
+                <tabBarController title="Driver Tab Bar" id="znR-I3-2PT" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="t0e-ua-5Rn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,42 +255,6 @@ How would you like to use the App?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDE-sk-Xeu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934.5" y="1097"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="wre-MN-6TN">
-            <objects>
-                <viewController id="e7i-aq-X5k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="siY-97-InY"/>
-                        <viewControllerLayoutGuide type="bottom" id="uPL-ha-Bfu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RUc-qi-ouv">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="brR-d8-0zn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X2N-fm-EWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3294" y="779"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="DV4-RV-iw0">
-            <objects>
-                <viewController id="A2J-hw-sK4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="o5t-oq-qkP"/>
-                        <viewControllerLayoutGuide type="bottom" id="60y-Nq-qXK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mx4-28-VCU">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="dUF-Cl-ha8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fwn-7f-FXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3288" y="123"/>
         </scene>
     </scenes>
     <resources>
