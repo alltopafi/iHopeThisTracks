@@ -49,8 +49,10 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         let item: deliveryHelper = feedItems[indexPath.row] as! deliveryHelper
         // Get references to labels of cell
         myCell.textLabel!.text = item.DESTINATION
-        print(item.DESTINATION)
-        print("test")
+        
+        print(item)
+//        print(item.DESTINATION)
+//        print("test")
         return myCell
     }
     

@@ -57,10 +57,11 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
     
     func parseJSON() {
         
-        var jsonResult: NSDictionary = NSDictionary()
+        var jsonResult: NSMutableArray = NSMutableArray()
         
         do{
-            jsonResult = try NSJSONSerialization.JSONObjectWithData(self.data, options:NSJSONReadingOptions.AllowFragments) as! NSDictionary
+            jsonResult = try NSJSONSerialization.JSONObjectWithData(data,options: NSJSONReadingOptions.AllowFragments) as! NSMutableArray
+            
             //print(jsonResult)
             
         } catch let error as NSError {
@@ -74,10 +75,11 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         for(var i = 0; i < jsonResult.count; i++)
         {
             
-            jsonElement = jsonResult as! NSDictionary
+            jsonElement = jsonResult[i] as! NSDictionary
             
             let myDelivery = deliveryHelper()
             
+            print(jsonElement["DRIVERNAME"])
             //the following insures none of the JsonElement values are nil through optional binding
             if let DRIVERNAME = jsonElement["DRIVERNAME"] as? String,
                 let DESTINATION = jsonElement["DESTINATION"] as? String,
@@ -85,15 +87,12 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
                 let NOTE = jsonElement["NOTE"] as? String,
                 let INVOICENUM = jsonElement["INVOICENUM"] as? Int
             {
-
                 myDelivery.DRIVERNAME = DRIVERNAME
                 myDelivery.DESTINATION = DESTINATION
                 myDelivery.STATUS = STATUS
                 myDelivery.NOTE = NOTE
                 myDelivery.INVOICENUM = INVOICENUM
-                
 
-                
             }
             
             deliveries.addObject(myDelivery)
