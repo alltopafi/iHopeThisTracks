@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class routeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DeliveryModelProtocal  {
+class routeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, deliveryModelProtocal  {
     
     //Properties
     

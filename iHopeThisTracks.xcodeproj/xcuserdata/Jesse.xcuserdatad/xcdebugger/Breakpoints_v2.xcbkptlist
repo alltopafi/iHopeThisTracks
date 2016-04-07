@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iHopeThisTracks/deliveryModel.swift"
-            timestampString = "481070895.813894"
+            timestampString = "481681664.386401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "parseJSON()"
-            landmarkType = "5">
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "deliveryModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
