@@ -57,52 +57,69 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
     
     func parseJSON() {
         
-        var jsonResult: NSMutableArray = NSMutableArray()
+        var jsonResult: NSDictionary = NSDictionary()
+        
         
         do{
-            jsonResult = try NSJSONSerialization.JSONObjectWithData(data,options: NSJSONReadingOptions.AllowFragments) as! NSMutableArray
+            jsonResult = try NSJSONSerialization.JSONObjectWithData(data,options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             
-            //print(jsonResult)
-            
+
+//            print(jsonResult)
+
         } catch let error as NSError {
             print(error)
             
         }
         
-        var jsonElement: NSDictionary = NSDictionary()
-        let deliveries: NSMutableArray = NSMutableArray()
-        //print(jsonResult)
-        for(var i = 0; i < jsonResult.count; i++)
-        {
-            
-            jsonElement = jsonResult[i] as! NSDictionary
-            
-            let myDelivery = deliveryHelper()
-            
-            print(jsonElement["DRIVERNAME"])
-            //the following insures none of the JsonElement values are nil through optional binding
-            if let DRIVERNAME = jsonElement["DRIVERNAME"] as? String,
-                let DESTINATION = jsonElement["DESTINATION"] as? String,
-                let STATUS = jsonElement["STATUS"] as? Int,
-                let NOTE = jsonElement["NOTE"] as? String,
-                let INVOICENUM = jsonElement["INVOICENUM"] as? Int
-            {
-                myDelivery.DRIVERNAME = DRIVERNAME
-                myDelivery.DESTINATION = DESTINATION
-                myDelivery.STATUS = STATUS
-                myDelivery.NOTE = NOTE
-                myDelivery.INVOICENUM = INVOICENUM
-
-            }
-            
-            deliveries.addObject(myDelivery)
-            
+        
+        let dataDictionary = jsonResult["object_name"] //as! NSDictionary
+//        print(dataDictionary)
+//        let name = dataDictionary!["DRIVERNAME"]
+//        print("name is")
+//        print(name)
+        
+        let something: NSMutableArray
+        something = jsonResult.mutableArrayValueForKey("object_name")
+        let driverNames = something.mutableArrayValueForKey("DRIVERNAME")
+        for(var i = 0;i<something.count;i++){
+        print(something[i])
         }
         
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            
-            self.delegate.itemsDownloaded(deliveries)
-            
-        })
+        
+//        var jsonElement: NSDictionary = NSDictionary()
+//        let deliveries: NSMutableArray = NSMutableArray()
+//        //print(jsonResult)
+//        for(var i = 0; i < jsonResult.count; i = i+1)
+//        {
+//            
+//            jsonElement = jsonResult as! NSDictionary
+//            
+//            let myDelivery = deliveryHelper()
+//            
+//            print(jsonElement["DRIVERNAME"])
+//            //the following insures none of the JsonElement values are nil through optional binding
+//            if let DRIVERNAME = jsonElement["DRIVERNAME"] as? String,
+//                let DESTINATION = jsonElement["DESTINATION"] as? String,
+//                let STATUS = jsonElement["STATUS"] as? Int,
+//                let NOTE = jsonElement["NOTE"] as? String,
+//                let INVOICENUM = jsonElement["INVOICENUM"] as? Int
+//            {
+//                myDelivery.DRIVERNAME = DRIVERNAME
+//                myDelivery.DESTINATION = DESTINATION
+//                myDelivery.STATUS = STATUS
+//                myDelivery.NOTE = NOTE
+//                myDelivery.INVOICENUM = INVOICENUM
+//
+//            }
+//            
+//            deliveries.addObject(myDelivery)
+//            
+//        }
+//        
+//        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//            
+//            self.delegate.itemsDownloaded(deliveries)
+//            
+//        })
     }
 }
