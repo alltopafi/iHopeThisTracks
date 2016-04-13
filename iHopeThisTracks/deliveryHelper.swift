@@ -14,9 +14,9 @@ class deliveryHelper: NSObject {
     
     var DRIVERNAME: String?
     var DESTINATION: String?
-    var STATUS: Int?
+    var STATUS: String?
     var NOTE: String?
-    var INVOICENUM: Int?
+    var INVOICENUM: String?
     
     
     //empty constructor
@@ -28,7 +28,7 @@ class deliveryHelper: NSObject {
     
     //construct with @name, @address, @latitude, and @longitude parameters
     
-    init(DRIVERNAME: String, DESTINATION: String, STATUS: Int, NOTE: String, INVOICENUM: Int) {
+    init(DRIVERNAME: String, DESTINATION: String, STATUS: String, NOTE: String, INVOICENUM: String) {
         
         self.DRIVERNAME = DRIVERNAME
         self.DESTINATION = DESTINATION

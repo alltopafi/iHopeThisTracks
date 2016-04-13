@@ -45,6 +45,7 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+        
         // Get the location to be shown
         let item: deliveryHelper = feedItems[indexPath.row] as! deliveryHelper
         // Get references to labels of cell
