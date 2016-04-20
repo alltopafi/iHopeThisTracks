@@ -8,17 +8,32 @@
 
 import UIKit
 
+//var index: Int = 0
+//var feedItems: NSArray = NSArray()
+
+
 class myDeliveryViewController: UIViewController
 {
     @IBOutlet weak var destinationLabel: UILabel!
- 
+    
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var invoiceNumberLabel: UILabel!
     
+   
     
     override func viewDidLoad() {
-        print("hey this view worked")
+        //print(feedItems[index])
+
+        var delivery: deliveryHelper
+        delivery = feedItems[index] as! deliveryHelper
+        
+        destinationLabel.text = delivery.DESTINATION
+        statusLabel.text = delivery.STATUS
+        noteLabel.text = delivery.NOTE
+        invoiceNumberLabel.text = delivery.INVOICENUM
+        
+        
     }
     
     

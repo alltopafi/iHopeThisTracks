@@ -7,14 +7,19 @@
 //
 import UIKit
 
+
+var feedItems: NSArray = NSArray()
+var index: Int = 0
+var selectedLocation : deliveryHelper = deliveryHelper()
+let myDeliveryModel = deliveryModel()
+
+
 class routeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, deliveryModelProtocal  {
     
     
     //Properties
     
-    var feedItems: NSArray = NSArray()
-    var selectedLocation : deliveryHelper = deliveryHelper()
-    let myDeliveryModel = deliveryModel()
+    
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -60,35 +65,27 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
 //        print("selected: ",currentCell.textLabel!.text)
-        var i = 0
-        for(; i<feedItems.count; i++)
+        
+        for(var i = 0; i<feedItems.count; i++)
         {
             if(feedItems[i].DESTINATION == currentCell.textLabel!.text)
             {
                 print("index is at: ",i)
+                index = i
                 break;
             }
         }
         
         switchScreen();
-//        
-//        let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-//        
-//        if let VC = storyBoard.instantiateViewControllerWithIdentifier("myDeliveryViewController") as? myDeliveryViewController {
-//            self.navigationController?.pushViewController(VC, animated: true)
-//        }
-        
-        
-//            let secondViewController:myDeliveryViewController = myDeliveryViewController()
-//            
-//            self.presentViewController(secondViewController, animated: true, completion: nil)
-//        
+ 
     }
     
     
     func switchScreen() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("myDeliveryViewController") as UIViewController
+        
+        
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
