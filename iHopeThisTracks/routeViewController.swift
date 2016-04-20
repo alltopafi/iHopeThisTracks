@@ -9,10 +9,13 @@ import UIKit
 
 class routeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, deliveryModelProtocal  {
     
+    
     //Properties
     
     var feedItems: NSArray = NSArray()
     var selectedLocation : deliveryHelper = deliveryHelper()
+    let myDeliveryModel = deliveryModel()
+
     @IBOutlet weak var listTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,14 +26,14 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        let myDeliveryModel = deliveryModel()
         myDeliveryModel.delegate = self
         myDeliveryModel.downloadItems()
-        
+       // feedItems = myDeliveryModel.getDeliveries()
+        //print(feedItems.count)
+
     }
     
     func itemsDownloaded(items: NSArray) {
-        
         feedItems = items
         self.listTableView.reloadData()
     }
@@ -50,7 +53,6 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         let item: deliveryHelper = feedItems[indexPath.row] as! deliveryHelper
         // Get references to labels of cell
         myCell.textLabel!.text = item.DESTINATION
-        
         print(item)
 //        print(item.DESTINATION)
 //        print("test")

@@ -13,16 +13,17 @@ protocol deliveryModelProtocal: class {
     func itemsDownloaded(items: NSArray)
 }
 
-
 class deliveryModel: NSObject, NSURLSessionDataDelegate {
     
     //properties
-    
+    var deliveries: NSMutableArray = NSMutableArray()
+
     weak var delegate: deliveryModelProtocal!
     
     var data : NSMutableData = NSMutableData()
     
     let urlPath: String = "http://24.14.58.240/getdriver.php" //this will be changed to the path where service.php lives
+    //let urlPath: String = "http://10.0.0.5/getdriver.php"
     
     
     func downloadItems() {
@@ -37,12 +38,10 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         let task = session.dataTaskWithURL(url)
         
         task.resume()
-        
     }
     
     func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
         self.data.appendData(data);
-        
     }
     
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
@@ -50,33 +49,27 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
             print("Failed to download data")
         }else {
             self.parseJSON()
+            self.getDeliveries()
             print("Data downloaded")
         }
         
     }
     
+
+    
     func parseJSON() {
         
         var jsonResult: NSDictionary = NSDictionary()
-        
+
         
         do{
             jsonResult = try NSJSONSerialization.JSONObjectWithData(data,options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             
-
-//            print(jsonResult)
-
         } catch let error as NSError {
             print(error)
             
         }
         
-        
-        let dataDictionary = jsonResult["object_name"] //as! NSDictionary
-//        print(dataDictionary)
-//        let name = dataDictionary!["DRIVERNAME"]
-//        print("name is")
-//        print(name)
         
         let something: NSMutableArray
         something = jsonResult.mutableArrayValueForKey("object_name")
@@ -87,26 +80,28 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         let invoicenum = something.mutableArrayValueForKey("INVOICENUM")
         
         
-        var deliveries: NSMutableArray = NSMutableArray()
         var deliveryHelp =  deliveryHelper()
         
-        for(var i = 0;i<something.count;i++){
-           
-            deliveryHelp =  deliveryHelper(DRIVERNAME: driverNames[i] as! String,DESTINATION: destinations[i] as! String,STATUS: status[i] as! String,NOTE: note[i] as! String,INVOICENUM: invoicenum[i] as! String)
+        for(var i = 0;i<something.count;i += 1)
+        {
+            deliveryHelp =  deliveryHelper(DRIVERNAME: driverNames[i] as! String,DESTINATION:destinations[i] as! String,STATUS: status[i] as! String,NOTE: note[i] as! String,INVOICENUM: invoicenum[i] as! String)
 
             deliveries.addObject(deliveryHelp)
         
-//            print(driverNames[i])
-//            print(destinations[i])
-//            print(status[i])
-//            print(note[i])
-//            print(invoicenum[i])
-//            print("----------")
-//            
-        
         }
         
-        print(deliveries[0])
-        print(deliveries[1])
+        for(var i = 0;i<deliveries.count;i += 1)
+        {
+            print(deliveries[i])
+            print("--------------")
+
+        }
+    
     }
+    
+    func getDeliveries() -> NSMutableArray {
+//        print("getDeliveries called")
+        return deliveries
+    }
+    
 }
