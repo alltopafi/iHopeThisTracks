@@ -1,5 +1,3 @@
-
-//
 //  File.swift
 //  iHopeThisTracks
 //
@@ -90,17 +88,10 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         
         }
         
-        for(var i = 0;i<deliveries.count;i += 1)
-        {
-            print(deliveries[i])
-            print("--------------")
 
-        }
-    
     }
     
     func getDeliveries() -> NSMutableArray {
-//        print("getDeliveries called")
         return deliveries
     }
     

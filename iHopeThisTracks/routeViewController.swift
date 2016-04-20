@@ -28,8 +28,9 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         myDeliveryModel.delegate = self
         myDeliveryModel.downloadItems()
-       // feedItems = myDeliveryModel.getDeliveries()
-        //print(feedItems.count)
+        sleep(1)
+        feedItems = myDeliveryModel.getDeliveries()
+//        print(feedItems.count)
 
     }
     
@@ -53,7 +54,7 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         let item: deliveryHelper = feedItems[indexPath.row] as! deliveryHelper
         // Get references to labels of cell
         myCell.textLabel!.text = item.DESTINATION
-        print(item)
+//        print(item)
 //        print(item.DESTINATION)
 //        print("test")
         return myCell
