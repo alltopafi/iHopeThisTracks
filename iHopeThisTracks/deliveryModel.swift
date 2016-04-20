@@ -87,8 +87,6 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
             deliveries.addObject(deliveryHelp)
         
         }
-        
-
     }
     
     func getDeliveries() -> NSMutableArray {
