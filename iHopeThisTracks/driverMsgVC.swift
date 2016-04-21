@@ -51,16 +51,11 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
         }
-        
-        
-        
-        
         task.resume()
+        sleep(1)
+        update()
     }
     
-    @IBAction func refresh(sender: AnyObject) {
-        self.update()
-    }
     
     override func viewDidAppear(animated: Bool) {
         self.update()
@@ -84,9 +79,10 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
         
         session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
         
-        var task = session.dataTaskWithURL(url)
-        
+        let task = session.dataTaskWithURL(url)
+    
         task.resume()
+        sleep(1)
     }
     
     func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
@@ -97,7 +93,7 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
         if error != nil {
             print("Failed to download data")
         }else {
-            self.parseJSON()
+            parseJSON()
 //            self.getDeliveries()
             print("Data downloaded")
         }
@@ -106,7 +102,14 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
     
     
     
+   
+    
+    
+    
     func parseJSON() {
+        
+        debugPrint("parse json called")
+
         
         var jsonResult: NSDictionary = NSDictionary()
         
@@ -119,14 +122,11 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
             
         }
         
-        
         var something: NSMutableArray
         something = jsonResult.mutableArrayValueForKey("object_name")
         let message_id = something.mutableArrayValueForKey("MESSAGE_ID")
         let senderName = something.mutableArrayValueForKey("NAME")
         let text = something.mutableArrayValueForKey("TEXT")
-        
-        
         var msgHelp =  msgObject()
 
         
@@ -137,17 +137,10 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
             
             messages.addObject(msgHelp)
         }
-        print("-----------")
-        print(messages.count)
     }
     
     func fillChatWindow()
     {
-        
-//        print("-----------")
-//        print("messages size: ")
-//        print(messages.count)
-        
         for(var i = printedIndex;i<messages.count;i++)
         {
                 let curMsg = messages[i] as! msgObject
@@ -157,7 +150,8 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
     }
     
     func update(){
-//        print("update called")
+        data.setData(NSData())
+        chatField.text = ""
         downloadItems()
         sleep(1)
         fillChatWindow()
