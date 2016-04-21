@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class addInvoiceViewController: UIViewController
+class addInvoiceViewController: UIViewController, UITextFieldDelegate
 {
     
     @IBOutlet weak var invoiceNumLabel: UITextField!//int
@@ -51,7 +51,15 @@ class addInvoiceViewController: UIViewController
     }
         
 
-        
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        invoiceNumLabel.resignFirstResponder()
+        partsLabel.resignFirstResponder()
+        priceLabel.resignFirstResponder()
+        accountLabel.resignFirstResponder()
+        notesLabel.resignFirstResponder()
+        return true
+    }
+    
     
     override func viewDidLoad() {
         print("add invoice contoller loaded")

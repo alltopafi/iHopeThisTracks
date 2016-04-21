@@ -14,10 +14,19 @@ var selectedLocation : deliveryHelper = deliveryHelper()
 let myDeliveryModel = deliveryModel()
 
 
-class routeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, deliveryModelProtocal  {
+class routeViewController: UIViewController, UITableViewDataSource,UITextFieldDelegate, UITableViewDelegate, deliveryModelProtocal
+{
+    @IBOutlet weak var nameField: UITextField!
     
+    @IBAction func setDriverButton(sender: AnyObject) {
+        
+    }
     
-    //Properties
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        return true
+    }
+    
     
     
 
@@ -89,6 +98,8 @@ class routeViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    
+   
     
 }
 

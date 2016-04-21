@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
+class driverMsgVC: UIViewController, NSURLSessionDataDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var chatField: UITextView!
     @IBOutlet weak var nameField: UITextField!
@@ -22,6 +22,11 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
     
     let urlPath: String = "http://24.14.58.240/getmessage.php" //this will be changed to the path where service.php lives
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        msgField.resignFirstResponder()
+        return true
+    }
     
     
     @IBAction func sendButtonClick(sender: AnyObject) {
@@ -59,15 +64,12 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
     
     
     override func viewDidAppear(animated: Bool) {
+       print("view appear")
         self.update()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.update()
-        
-//        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("update"), userInfo: nil, repeats: true) //repeats after 5 seconds
-
-        
     }
     
     
