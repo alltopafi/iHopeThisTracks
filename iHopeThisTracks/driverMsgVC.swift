@@ -53,6 +53,7 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
         }
         task.resume()
         sleep(1)
+        msgField.text = ""
         update()
     }
     
