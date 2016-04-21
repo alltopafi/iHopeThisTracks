@@ -23,27 +23,28 @@ class addInvoiceViewController: UIViewController
         let price = Double(priceLabel.text!)
         let priceRound = Double(round(1000*price!)/1000)
         let invoiceNum = Int(invoiceNumLabel.text!)
-        print(priceRound)
-                print("button hit")
-                let request = NSMutableURLRequest(URL: NSURL(string: "http://24.14.58.240/setinvoice.php")!)
+        
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://24.14.58.240/setinvoice.php")!)
                 request.HTTPMethod = "POST"
-                let postString = "a=\(invoiceNum)&b=\(partsLabel.text!)&c=\(priceRound)&d=\(accountLabel.text!)&e=\(notesLabel.text!)"
+        
+        let postString = "a=\(invoiceNum)&b=\(partsLabel.text!)&c=\(priceRound)&d=\(accountLabel.text!)&e=\(notesLabel.text!)"
                 request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
-                let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
                     data, response, error in
         
-                    if error != nil {
-                        print("error=\(error)")
-                        return
-                    }
+        if error != nil {
+            print("error=\(error)")
+            return
+            }
         
-                    print("response = \(response)")
+            print("response = \(response)")
         
-                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                    print("responseString = \(responseString)")
-                }
-                task.resume()
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+        }
+            task.resume()
     
     
     
