@@ -19,6 +19,8 @@
 		8828B8BC1C6C12590076E49A /* iHopeThisTracksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828B8BB1C6C12590076E49A /* iHopeThisTracksUITests.swift */; };
 		885416B01CC8156F00C288B8 /* myDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885416AF1CC8156F00C288B8 /* myDeliveryViewController.swift */; };
 		887F7CFC1CC854AF000446E0 /* addInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F7CFB1CC854AF000446E0 /* addInvoiceViewController.swift */; };
+		887F7D041CC91BD6000446E0 /* driverMsgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F7D031CC91BD6000446E0 /* driverMsgVC.swift */; };
+		887F7D061CC91EFC000446E0 /* msgObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F7D051CC91EFC000446E0 /* msgObject.swift */; };
 		88E299EA1CB5D7DC00175280 /* deliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E299E91CB5D7DC00175280 /* deliveryModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		8828B8BD1C6C12590076E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885416AF1CC8156F00C288B8 /* myDeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myDeliveryViewController.swift; sourceTree = "<group>"; };
 		887F7CFB1CC854AF000446E0 /* addInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addInvoiceViewController.swift; sourceTree = "<group>"; };
+		887F7D031CC91BD6000446E0 /* driverMsgVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverMsgVC.swift; sourceTree = "<group>"; };
+		887F7D051CC91EFC000446E0 /* msgObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = msgObject.swift; sourceTree = "<group>"; };
 		88E299E91CB5D7DC00175280 /* deliveryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deliveryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,10 +121,12 @@
 				8828B8A41C6C12590076E49A /* LaunchScreen.storyboard */,
 				8828B8A71C6C12590076E49A /* Info.plist */,
 				880D0C591CAC840400295BDD /* deliveryHelper.swift */,
+				887F7D051CC91EFC000446E0 /* msgObject.swift */,
 				880D0C5B1CAC8A0400295BDD /* routeViewController.swift */,
 				88E299E91CB5D7DC00175280 /* deliveryModel.swift */,
 				885416AF1CC8156F00C288B8 /* myDeliveryViewController.swift */,
 				887F7CFB1CC854AF000446E0 /* addInvoiceViewController.swift */,
+				887F7D031CC91BD6000446E0 /* driverMsgVC.swift */,
 			);
 			path = iHopeThisTracks;
 			sourceTree = "<group>";
@@ -278,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				880D0C5A1CAC840400295BDD /* deliveryHelper.swift in Sources */,
+				887F7D041CC91BD6000446E0 /* driverMsgVC.swift in Sources */,
 				88E299EA1CB5D7DC00175280 /* deliveryModel.swift in Sources */,
 				885416B01CC8156F00C288B8 /* myDeliveryViewController.swift in Sources */,
+				887F7D061CC91EFC000446E0 /* msgObject.swift in Sources */,
 				8828B89E1C6C12590076E49A /* ViewController.swift in Sources */,
 				8828B89C1C6C12590076E49A /* AppDelegate.swift in Sources */,
 				8801779E1C75A36900976BCD /* managerViewController.swift in Sources */,

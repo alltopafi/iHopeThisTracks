@@ -315,7 +315,7 @@ How would you like to use the App?</string>
                         <viewControllerLayoutGuide type="bottom" id="PWS-qM-OTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zeH-nU-pCe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-1N-nLa">
@@ -506,7 +506,7 @@ How would you like to use the App?</string>
         <!--Messages-->
         <scene sceneID="gTl-XD-fOA">
             <objects>
-                <viewController title="Messages" id="2BB-7P-jpJ" sceneMemberID="viewController">
+                <viewController title="Messages" id="2BB-7P-jpJ" customClass="driverMsgVC" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1U-e0-QHU"/>
                         <viewControllerLayoutGuide type="bottom" id="3Dw-w6-P4g"/>
@@ -555,8 +555,11 @@ How would you like to use the App?</string>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="294" y="565" width="61" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="sendButtonClick:" destination="2BB-7P-jpJ" eventType="touchUpInside" id="1s2-Wn-V7P"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Messages" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-eh-JkB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-eh-JkB">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -589,7 +592,13 @@ How would you like to use the App?</string>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" id="3P3-ID-kJ8"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chatField" destination="qf8-eh-JkB" id="Qer-fj-qwZ"/>
+                        <outlet property="msgField" destination="IBI-fq-jQ2" id="rRw-Vi-cKp"/>
+                        <outlet property="nameField" destination="AoN-t7-rGt" id="Rma-La-7ja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onJ-H8-YZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
