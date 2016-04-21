@@ -18,24 +18,62 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
     
     var data : NSMutableData = NSMutableData()
     var messages: NSMutableArray = NSMutableArray()
+    var printedIndex = 0
     
     let urlPath: String = "http://24.14.58.240/getmessage.php" //this will be changed to the path where service.php lives
     
     
     
     @IBAction func sendButtonClick(sender: AnyObject) {
+       
+        
+        
+        let name = nameField.text!
+        let msg = msgField.text!
+        
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://24.14.58.240/setmessage.php")!)
+        request.HTTPMethod = "POST"
+        
+        let postString = "a=\(name)&b=\(msg)"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+        }
         
         
         
+        
+        task.resume()
+    }
+    
+    @IBAction func refresh(sender: AnyObject) {
+        self.update()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.update()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.update()
+        
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("update"), userInfo: nil, repeats: true) //repeats after 5 seconds
+
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        downloadItems()
-        sleep(1)
-        fillChatWindow()
-    }
     
     func downloadItems(){
         
@@ -46,7 +84,7 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
         
         session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
         
-        let task = session.dataTaskWithURL(url)
+        var task = session.dataTaskWithURL(url)
         
         task.resume()
     }
@@ -82,38 +120,48 @@ class driverMsgVC: UIViewController, NSURLSessionDataDelegate {
         }
         
         
-        let something: NSMutableArray
+        var something: NSMutableArray
         something = jsonResult.mutableArrayValueForKey("object_name")
         let message_id = something.mutableArrayValueForKey("MESSAGE_ID")
         let senderName = something.mutableArrayValueForKey("NAME")
         let text = something.mutableArrayValueForKey("TEXT")
         
         
-        
         var msgHelp =  msgObject()
 
+        
+        //this was messsages.count
         for(var i = 0;i<something.count;i += 1)
         {
             msgHelp =  msgObject(MESSAGE_ID: message_id[i] as! String,NAME: senderName[i] as! String,TEXT: text[i] as! String)
             
             messages.addObject(msgHelp)
-            
         }
+        print("-----------")
+        print(messages.count)
     }
     
     func fillChatWindow()
     {
-        for(var i = 0;i<messages.count;i++)
+        
+//        print("-----------")
+//        print("messages size: ")
+//        print(messages.count)
+        
+        for(var i = printedIndex;i<messages.count;i++)
         {
-        let curMsg = messages[i] as! msgObject
-        chatField.text.appendContentsOf( curMsg.NAME! + ": " + curMsg.TEXT! + "\n\n")
+                let curMsg = messages[i] as! msgObject
+                chatField.text.appendContentsOf( curMsg.NAME! + ": " + curMsg.TEXT! + "\n\n")
+                printedIndex++
         }
-    
-    
-    
     }
     
-    
+    func update(){
+//        print("update called")
+        downloadItems()
+        sleep(1)
+        fillChatWindow()
+    }
     
     
     

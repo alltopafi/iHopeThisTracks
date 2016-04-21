@@ -608,6 +608,7 @@ How would you like to use the App?</string>
         <scene sceneID="kdx-GV-QH2">
             <objects>
                 <tabBarController title="Driver Tab Bar" id="znR-I3-2PT" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="t0e-ua-5Rn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -628,6 +629,6 @@ How would you like to use the App?</string>
         <image name="Bak" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l1p-1a-8O3"/>
+        <segue reference="D61-gl-17Z"/>
     </inferredMetricsTieBreakers>
 </document>
