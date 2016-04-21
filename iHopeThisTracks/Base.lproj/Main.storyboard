@@ -38,7 +38,7 @@ How would you like to use the App?</string>
                                     <rect key="frame" x="90" y="247" width="66" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="xzb-j7-A9Y" kind="show" id="a0S-kt-lpY"/>
+                                    <segue destination="TkM-4u-BrQ" kind="show" id="gbF-r5-1AB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB9-ba-XdI">
@@ -145,13 +145,33 @@ How would you like to use the App?</string>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="P9O-qQ-fte"/>
                     <connections>
                         <outlet property="mapView" destination="tNU-ol-yMx" id="6aG-he-xyP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxw-zt-Y4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="93"/>
+            <point key="canvasLocation" x="1653" y="17"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bVZ-dL-VlI">
+            <objects>
+                <tabBarController id="TkM-4u-BrQ" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="GWa-d6-9QB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xzb-j7-A9Y" kind="relationship" relationship="viewControllers" id="zjA-We-s4a"/>
+                        <segue destination="2BB-7P-jpJ" kind="relationship" relationship="viewControllers" id="q12-Qd-3ru"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bm-nA-k48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868.5" y="-358"/>
         </scene>
         <!--Add Invoice-->
         <scene sceneID="ok6-OB-qBs">
@@ -680,6 +700,7 @@ How would you like to use the App?</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KrR-gl-iD5"/>
+        <segue reference="q12-Qd-3ru"/>
         <segue reference="8GO-2V-Sro"/>
     </inferredMetricsTieBreakers>
 </document>
