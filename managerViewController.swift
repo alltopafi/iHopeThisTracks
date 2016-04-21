@@ -15,10 +15,26 @@ class managerViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         let initialLocation = CLLocation(latitude: 40.4972157, longitude: -88.9947266)
+        
+        var anotation = MKPointAnnotation()
+        var latitude:Double = 40.4972157
+        
+        anotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: -88.9947266)
+        anotation.title="Current Location 1"
+        anotation.subtitle="Driver 1"
+        
+        //add pin with annotation
+        mapView.addAnnotation(anotation)
+        
+        var anotation2 = MKPointAnnotation()
+        
+        anotation2.coordinate = CLLocationCoordinate2D(latitude: 40.49, longitude: -88.99)
+        anotation2.title="Driver Destination"
+        anotation2.subtitle="Driver 2"
+        
+        //add pin with annotation
+        mapView.addAnnotation(anotation2)
         
         centerMapOnLocation(initialLocation)
         
