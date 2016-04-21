@@ -506,7 +506,7 @@ How would you like to use the App?</string>
         <!--Messages-->
         <scene sceneID="gTl-XD-fOA">
             <objects>
-                <viewController title="Messages" id="2BB-7P-jpJ" customClass="messagesViewController" customModule="iHopeThisTracks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Messages" id="2BB-7P-jpJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I1U-e0-QHU"/>
                         <viewControllerLayoutGuide type="bottom" id="3Dw-w6-P4g"/>
@@ -515,14 +515,6 @@ How would you like to use the App?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oay-dZ-aAO">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="580" width="291" height="30"/>
-                                </variation>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-Z1-0B0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -532,79 +524,21 @@ How would you like to use the App?</string>
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3h-Rc-xTG">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="541" width="50" height="21"/>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZ7-Oo-Z9k">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="97" y="538" width="258" height="30"/>
-                                </variation>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-zg-zKe">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Send"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="319" y="580" width="36" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendMsg:" destination="2BB-7P-jpJ" eventType="touchUpInside" id="pnR-aN-f54"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuq-7m-t0W">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCellMsg" id="bvq-n5-qnk">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvq-n5-qnk" id="dIu-Hw-z29">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="59" width="335" height="471"/>
-                                </variation>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="oay-dZ-aAO"/>
                                 <exclude reference="1MI-Z1-0B0"/>
-                                <exclude reference="j3h-Rc-xTG"/>
-                                <exclude reference="xZ7-Oo-Z9k"/>
-                                <exclude reference="G7D-zg-zKe"/>
-                                <exclude reference="uuq-7m-t0W"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="oay-dZ-aAO"/>
                                 <include reference="1MI-Z1-0B0"/>
-                                <include reference="j3h-Rc-xTG"/>
-                                <include reference="xZ7-Oo-Z9k"/>
-                                <include reference="G7D-zg-zKe"/>
-                                <include reference="uuq-7m-t0W"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" id="3P3-ID-kJ8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="messageField" destination="oay-dZ-aAO" id="FP4-OT-xgU"/>
-                        <outlet property="nameField" destination="xZ7-Oo-Z9k" id="PNf-fH-SfI"/>
-                        <outlet property="sendMsg" destination="G7D-zg-zKe" id="pKV-FN-yeT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onJ-H8-YZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
