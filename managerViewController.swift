@@ -19,8 +19,9 @@ class managerViewController: UIViewController {
         
         var anotation = MKPointAnnotation()
         var latitude:Double = 40.4972157
+        var longitude:Double = -88.9947266
         
-        anotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: -88.9947266)
+        anotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         anotation.title="Current Location 1"
         anotation.subtitle="Driver 1"
         
