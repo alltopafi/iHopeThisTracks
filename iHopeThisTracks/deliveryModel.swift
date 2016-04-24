@@ -93,7 +93,7 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         let price = something.mutableArrayValueForKey("PRICE")
         let accountNames = something.mutableArrayValueForKey("ACCOUNTNAME")
         let notes = something.mutableArrayValueForKey("NOTES")
-        let assigned = something.mutableArrayValueForKey("ASSIGNED: ")
+        let assigned = something.mutableArrayValueForKey("ASSIGNED")
         
         
         //ah
