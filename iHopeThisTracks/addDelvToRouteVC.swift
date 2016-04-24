@@ -6,6 +6,12 @@
 //  Copyright © 2016 it391. All rights reserved.
 //
 
+//this view needs to populate from the unassigned invoices
+//this needs to updated as well it
+//need to create another swift file that is similar to deliveryModel
+//where we can view all open deliveries, and when a user clicks on them, it will update the invoice
+//table, column assigned, as well as create a row in the delivery table for this invoice and driver name
+
 import Foundation
 import UIKit
 

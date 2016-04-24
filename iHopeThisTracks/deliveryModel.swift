@@ -5,6 +5,10 @@
 //  Copyright © 2016 it391. All rights reserved.
 //
 
+//this needs to be changed
+//needs to grab open invoices instead of deliveries
+
+
 import Foundation
 
 protocol deliveryModelProtocal: class {
@@ -19,6 +23,8 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
     weak var delegate: deliveryModelProtocal!
     
     var data : NSMutableData = NSMutableData()
+    
+    //this address when need to point to a php file where it gets all invoice where drivername == the name in the text field 
     
     let urlPath: String = "http://24.14.58.240/getdriver.php" //this will be changed to the path where service.php lives
     //let urlPath: String = "http://10.0.0.5/getdriver.php"
