@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36874D641CCD70A900815892 /* invoiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36874D631CCD70A900815892 /* invoiceHelper.swift */; };
 		8801779E1C75A36900976BCD /* managerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801779D1C75A36900976BCD /* managerViewController.swift */; };
 		880D0C5A1CAC840400295BDD /* deliveryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D0C591CAC840400295BDD /* deliveryHelper.swift */; };
 		880D0C5C1CAC8A0400295BDD /* routeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D0C5B1CAC8A0400295BDD /* routeViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36874D631CCD70A900815892 /* invoiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = invoiceHelper.swift; path = ../invoiceHelper.swift; sourceTree = "<group>"; };
 		8801779D1C75A36900976BCD /* managerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = managerViewController.swift; path = ../managerViewController.swift; sourceTree = "<group>"; };
 		880D0C591CAC840400295BDD /* deliveryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deliveryHelper.swift; sourceTree = "<group>"; };
 		880D0C5B1CAC8A0400295BDD /* routeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routeViewController.swift; sourceTree = "<group>"; };
@@ -115,21 +117,22 @@
 		8828B89A1C6C12590076E49A /* iHopeThisTracks */ = {
 			isa = PBXGroup;
 			children = (
-				8801779D1C75A36900976BCD /* managerViewController.swift */,
-				8828B89B1C6C12590076E49A /* AppDelegate.swift */,
-				8828B89D1C6C12590076E49A /* ViewController.swift */,
-				8828B89F1C6C12590076E49A /* Main.storyboard */,
 				8828B8A21C6C12590076E49A /* Assets.xcassets */,
 				8828B8A41C6C12590076E49A /* LaunchScreen.storyboard */,
-				8828B8A71C6C12590076E49A /* Info.plist */,
-				880D0C591CAC840400295BDD /* deliveryHelper.swift */,
-				887F7D051CC91EFC000446E0 /* msgObject.swift */,
-				880D0C5B1CAC8A0400295BDD /* routeViewController.swift */,
-				88E299E91CB5D7DC00175280 /* deliveryModel.swift */,
-				885416AF1CC8156F00C288B8 /* myDeliveryViewController.swift */,
+				8828B89F1C6C12590076E49A /* Main.storyboard */,
 				887F7CFB1CC854AF000446E0 /* addInvoiceViewController.swift */,
-				887F7D031CC91BD6000446E0 /* driverMsgVC.swift */,
+				8828B89B1C6C12590076E49A /* AppDelegate.swift */,
 				887F7D071CC9701B000446E0 /* addDelvToRouteVC.swift */,
+				880D0C591CAC840400295BDD /* deliveryHelper.swift */,
+				88E299E91CB5D7DC00175280 /* deliveryModel.swift */,
+				887F7D031CC91BD6000446E0 /* driverMsgVC.swift */,
+				36874D631CCD70A900815892 /* invoiceHelper.swift */,
+				8801779D1C75A36900976BCD /* managerViewController.swift */,
+				887F7D051CC91EFC000446E0 /* msgObject.swift */,
+				885416AF1CC8156F00C288B8 /* myDeliveryViewController.swift */,
+				880D0C5B1CAC8A0400295BDD /* routeViewController.swift */,
+				8828B89D1C6C12590076E49A /* ViewController.swift */,
+				8828B8A71C6C12590076E49A /* Info.plist */,
 			);
 			path = iHopeThisTracks;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				8801779E1C75A36900976BCD /* managerViewController.swift in Sources */,
 				887F7CFC1CC854AF000446E0 /* addInvoiceViewController.swift in Sources */,
 				880D0C5C1CAC8A0400295BDD /* routeViewController.swift in Sources */,
+				36874D641CCD70A900815892 /* invoiceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

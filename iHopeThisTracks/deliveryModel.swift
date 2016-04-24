@@ -18,17 +18,19 @@ protocol deliveryModelProtocal: class {
 class deliveryModel: NSObject, NSURLSessionDataDelegate {
     
     //properties
-    var deliveries: NSMutableArray = NSMutableArray()
+    //ah
+//    var deliveries: NSMutableArray = NSMutableArray()
+    var invoices: NSMutableArray = NSMutableArray()
 
     weak var delegate: deliveryModelProtocal!
     
     var data : NSMutableData = NSMutableData()
     
     //this address when need to point to a php file where it gets all invoice where drivername == the name in the text field 
-    
-    let urlPath: String = "http://24.14.58.240/getdriver.php" //this will be changed to the path where service.php lives
+    //ah
+//    let urlPath: String = "http://24.14.58.240/getdriver.php" //this will be changed to the path where service.php lives
     //let urlPath: String = "http://10.0.0.5/getdriver.php"
-    
+    let urlPath: String = "http://24.14.58.240/getinvoice.php"
     
     func downloadItems() {
         
@@ -53,7 +55,9 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
             print("Failed to download data")
         }else {
             self.parseJSON()
-            self.getDeliveries()
+            //ah
+//            self.getDeliveries()
+            self.getInvoices()
             print("Data downloaded")
         }
         
@@ -77,26 +81,47 @@ class deliveryModel: NSObject, NSURLSessionDataDelegate {
         
         let something: NSMutableArray
         something = jsonResult.mutableArrayValueForKey("object_name")
-        let driverNames = something.mutableArrayValueForKey("DRIVERNAME")
-        let destinations = something.mutableArrayValueForKey("DESTINATION")
-        let status = something.mutableArrayValueForKey("STATUS")
-        let note = something.mutableArrayValueForKey("NOTE")
-        let invoicenum = something.mutableArrayValueForKey("INVOICENUM")
-        
-        
-        var deliveryHelp =  deliveryHelper()
-        
-        for(var i = 0;i<something.count;i += 1)
-        {
-            deliveryHelp =  deliveryHelper(DRIVERNAME: driverNames[i] as! String,DESTINATION:destinations[i] as! String,STATUS: status[i] as! String,NOTE: note[i] as! String,INVOICENUM: invoicenum[i] as! String)
+        //ah
+//        let driverNames = something.mutableArrayValueForKey("DRIVERNAME")
+//        let destinations = something.mutableArrayValueForKey("DESTINATION")
+//        let status = something.mutableArrayValueForKey("STATUS")
+//        let note = something.mutableArrayValueForKey("NOTE")
+//        let invoicenum = something.mutableArrayValueForKey("INVOICENUM")
 
-            deliveries.addObject(deliveryHelp)
+        let invoiceNums = something.mutableArrayValueForKey("INVOICENUM")
+        let parts = something.mutableArrayValueForKey("PARTS")
+        let price = something.mutableArrayValueForKey("PRICE")
+        let accountNames = something.mutableArrayValueForKey("ACCOUNTNAME")
+        let notes = something.mutableArrayValueForKey("NOTES")
+        let assigned = something.mutableArrayValueForKey("ASSIGNED: ")
         
+        
+        //ah
+//        var deliveryHelp =  deliveryHelper()
+//        
+//        for(var i = 0;i<something.count;i += 1)
+//        {
+//            deliveryHelp =  deliveryHelper(DRIVERNAME: driverNames[i] as! String,DESTINATION:destinations[i] as! String,STATUS: status[i] as! String,NOTE: note[i] as! String,INVOICENUM: invoicenum[i] as! String)
+//
+//            deliveries.addObject(deliveryHelp)
+//        
+//        }
+        var invoiceHelp = invoiceHelper()
+        
+        for(var i = 0; i < something.count; i+=1)
+        {
+            invoiceHelp = invoiceHelper(INVOICENUM: invoiceNums[i] as! String, PARTS: parts[i] as! String, PRICE: price[i] as! String, ACCOUNTNAME: accountNames[i] as! String, NOTES: notes[i] as! String, ASSIGNED: assigned[i] as! String)
+            
+            invoices.addObject(invoiceHelp)
         }
     }
     
-    func getDeliveries() -> NSMutableArray {
-        return deliveries
+//    func getDeliveries() -> NSMutableArray {
+//        return deliveries
+//    }
+    func getInvoices() -> NSMutableArray
+    {
+        return invoices
     }
     
 }
